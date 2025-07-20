@@ -171,16 +171,6 @@ struct MovieRow: View {
     }
 }
 
-// MARK: - Extend Movie Model for Poster URL (No changes needed)
-extension Movie {
-    var posterURL: URL? {
-        if let posterPath = posterPath {
-            return URL(string: Constants.tmdbImageBaseURL + posterPath)
-        }
-        return nil
-    }
-}
-
 // MARK: - Preview Provider (No changes needed)
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
